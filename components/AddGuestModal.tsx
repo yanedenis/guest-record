@@ -12,7 +12,7 @@ type Props = {
   tablesQte: TableType[],
 }
 
-export default function GuestModal({ isVisible, addGuest, onClose, tablesQte }: Props) {
+export default function AddGuestModal({ isVisible, addGuest, onClose, tablesQte }: Props) {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [gender, setGender] = useState('');

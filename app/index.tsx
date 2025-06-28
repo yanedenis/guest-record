@@ -5,7 +5,7 @@ import Buttons from "@/components/Buttons";
 import TableList from "@/components/TableList";
 import { TableType } from "@/types/TableType";
 import { GuestType } from "@/types/GuestType";
-import GuestModal from "@/components/GuestModal";
+import AddGuestModal from "@/components/AddGuestModal";
 
 
 export default function Index() {
@@ -25,7 +25,7 @@ export default function Index() {
   }
 
   const addGuest = ({ name, age, gender, side, tableId }: Omit<GuestType, "id">) => {
-    const guestsAtTheTable = guests.filter(guest => guest.tableId === tableId).length
+    const guestsAtTheTable = guests.filter(guest => guest.tableId === tableId)?.length
     const tableCapacity = tablesQte.find((table) => table.id === tableId)?.capacity
 
     const newGuestId = guests.length + 1;
@@ -65,7 +65,7 @@ export default function Index() {
         <TableList tablesQte={tablesQte} guests={guests} />
       </ScrollView>
       <Buttons functions={[addTable, openModal]} />
-      <GuestModal isVisible={modalState} onClose={closeModal} addGuest={addGuest} tablesQte={tablesQte} />
+      <AddGuestModal isVisible={modalState} onClose={closeModal} addGuest={addGuest} tablesQte={tablesQte} />
     </View>
   );
 }
