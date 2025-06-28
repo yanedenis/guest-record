@@ -21,7 +21,14 @@ After running the command, you'll see options to open the app in:
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## This project uses third-party library - [Picker](https://docs.expo.dev/versions/latest/sdk/picker/)
+# Third-party libraries 
+
+## [Picker](https://docs.expo.dev/versions/latest/sdk/picker/)
+
+Its already installed in this project, but if you want it in your project, run this command
+```bash
+npx expo install @react-native-picker/picker
+```
 
 You can find Picker components in the `@/components/GuestModal.tsx`:
 
@@ -33,7 +40,7 @@ You can find Picker components in the `@/components/GuestModal.tsx`:
 </Picker>
 ```
 
-## Learn more
+### Learn more
 
 To learn more about developing your project with Expo, look at the following resources:
 

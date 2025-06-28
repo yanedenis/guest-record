@@ -39,7 +39,7 @@ export default function Index() {
     }
 
     if (tableCapacity) {
-      if (guestsAtTheTable >= tableCapacity) {
+      if (guestsAtTheTable === tableCapacity) {
         alert("Недостаточно мест на данном столе")
       } else {
         setGuests((prevGuests) => [...prevGuests, newGuest])
